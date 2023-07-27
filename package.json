@@ -1,11 +1,10 @@
 {
-    "version": "0.1.0",
+    "version": "0.0.1",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
-        "dist",
-        "src"
+        "dist"
     ],
     "engines": {
         "node": ">=10"
@@ -34,9 +33,29 @@
         "singleQuote": true,
         "trailingComma": "es5"
     },
-    "name": "popup-modal",
-    "author": "DanielGraham123",
+    "name": "@dannybee/popup-modal",
+    "author": "Daniel Graham Boaz",
     "module": "dist/popup-modal.esm.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DanielGraham123/popup-modal"
+    },
+    "homepage": "https://github.com/DanielGraham123/popup-modal",
+    "keywords": [
+        "react",
+        "modal",
+        "popup",
+        "popup-modal",
+        "react-modal",
+        "react-popup",
+        "react-popup-modal",
+        "react-modal-popup"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/",
+        "tag": "latest"
+    },
     "size-limit": [
         {
             "path": "dist/popup-modal.cjs.production.min.js",
