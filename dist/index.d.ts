@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './index.css';
 interface PopupModalProps {
     children: React.ReactNode;
     handleClose: () => void;

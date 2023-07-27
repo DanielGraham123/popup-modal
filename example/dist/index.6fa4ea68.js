@@ -584,7 +584,6 @@ var _ie11 = require("react-app-polyfill/ie11");
 var _react = require("react");
 var _reactDom = require("react-dom");
 var _ = require("../dist/");
-var _stylesCss = require("../dist/styles.css");
 var _indexCss = require("./index.css");
 const App = ()=>{
     const [showModal, setShowModal] = _react.useState(false);
@@ -595,7 +594,7 @@ const App = ()=>{
     return /*#__PURE__*/ _react.createElement("div", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 16,
+            lineNumber: 15,
             columnNumber: 5
         },
         __self: undefined
@@ -603,7 +602,7 @@ const App = ()=>{
         onClick: ()=>setShowModal(true),
         __source: {
             fileName: "index.tsx",
-            lineNumber: 17,
+            lineNumber: 16,
             columnNumber: 7
         },
         __self: undefined
@@ -611,28 +610,28 @@ const App = ()=>{
         handleClose: closeModal,
         __source: {
             fileName: "index.tsx",
-            lineNumber: 20,
+            lineNumber: 19,
             columnNumber: 9
         },
         __self: undefined
     }, /*#__PURE__*/ _react.createElement("h2", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 21,
+            lineNumber: 20,
             columnNumber: 11
         },
         __self: undefined
     }, "Modal"), /*#__PURE__*/ _react.createElement("div", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 22,
+            lineNumber: 21,
             columnNumber: 11
         },
         __self: undefined
     }, /*#__PURE__*/ _react.createElement("p", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 23,
+            lineNumber: 22,
             columnNumber: 13
         },
         __self: undefined
@@ -641,7 +640,7 @@ const App = ()=>{
 _reactDom.render(/*#__PURE__*/ _react.createElement(App, {
     __source: {
         fileName: "index.tsx",
-        lineNumber: 31,
+        lineNumber: 30,
         columnNumber: 17
     },
     __self: undefined
@@ -652,7 +651,7 @@ _reactDom.render(/*#__PURE__*/ _react.createElement(App, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react-app-polyfill/ie11":"1ALbI","react":"6biBR","react-dom":"cTtv7","../dist/":"bmkYC","../dist/styles.css":"7vGLN","./index.css":"giGSC","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ALbI":[function(require,module,exports) {
+},{"react-app-polyfill/ie11":"1ALbI","react":"6biBR","react-dom":"cTtv7","../dist/":"bmkYC","./index.css":"giGSC","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ALbI":[function(require,module,exports) {
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -28157,6 +28156,22 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var React = require("e3d43649a5d9f6fd");
+function styleInject(css, ref) {
+    if (ref === void 0) ref = {};
+    var insertAt = ref.insertAt;
+    if (!css || typeof document === "undefined") return;
+    var head = document.head || document.getElementsByTagName("head")[0];
+    var style = document.createElement("style");
+    style.type = "text/css";
+    if (insertAt === "top") {
+        if (head.firstChild) head.insertBefore(style, head.firstChild);
+        else head.appendChild(style);
+    } else head.appendChild(style);
+    if (style.styleSheet) style.styleSheet.cssText = css;
+    else style.appendChild(document.createTextNode(css));
+}
+var css_248z = "/* Popup style */\n.popup-box {\n    position: fixed;\n    background: #00000050;\n    width: 100%;\n    height: 100vh;\n    top: 0;\n    left: 0;\n}\n\n.box {\n    position: relative;\n    width: 70%;\n    margin: 0 auto;\n    height: auto;\n    max-height: 70vh;\n    margin-top: calc(100vh - 85vh - 20px);\n    background: #fff;\n    border-radius: 4px;\n    padding: 20px;\n    border: 1px solid #999;\n    overflow: auto;\n}\n\n.close-icon {\n    content: '\\2715';\n    cursor: pointer;\n    position: fixed;\n    right: calc(15% - 30px);\n    top: calc(100vh - 85vh - 33px);\n    background: #ededed;\n    width: 25px;\n    height: 25px;\n    border-radius: 50%;\n    line-height: 20px;\n    text-align: center;\n    border: 1px solid #999;\n    font-size: 20px;\n}";
+styleInject(css_248z);
 var PopupModal = function PopupModal(_ref) {
     var children = _ref.children, handleClose = _ref.handleClose;
     return React.createElement(React.Fragment, null, React.createElement("div", {
@@ -28780,6 +28795,6 @@ module.exports = require("96622d495519d4e");
     exports.setSignature = setSignature;
 })();
 
-},{}],"7vGLN":[function() {},{}],"giGSC":[function() {},{}]},["3fE3b","kjLP2"], "kjLP2", "parcelRequired98c")
+},{}],"giGSC":[function() {},{}]},["3fE3b","kjLP2"], "kjLP2", "parcelRequired98c")
 
 //# sourceMappingURL=index.6fa4ea68.js.map

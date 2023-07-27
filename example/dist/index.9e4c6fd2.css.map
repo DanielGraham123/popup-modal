@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAIA","sources":["index.css"],"sourcesContent":[".box {\n    width: 54%;\n}\n\n.close-icon {\n    right: calc(22.8% - 30px);\n}"],"names":[],"version":3,"file":"index.9e4c6fd2.css.map","sourceRoot":"/__parcel_source_root/"}
