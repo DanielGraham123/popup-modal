@@ -1,9 +1,8 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-// import { PopupModal } from '../dist/';
-// import './index.css';
-import { PopupModal } from './popup';
+import { PopupModal } from '../dist';
+import './index.css';
 
 const App = () => {
   const [showModal, setShowModal] = React.useState(false);
