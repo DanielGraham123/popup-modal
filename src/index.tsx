@@ -9,8 +9,8 @@ interface PopupModalProps {
 export const PopupModal = ({ children, handleClose }: PopupModalProps) => {
   return (
     <>
-      <div className="popup-box">
-        <div className="box">
+      <div className="popup-box ">
+        <div className="box blowup">
           <span className="close-icon" onClick={handleClose}>
             x
           </span>

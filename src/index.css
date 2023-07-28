@@ -7,6 +7,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
 }
 
 .box {
@@ -21,6 +22,8 @@
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    animation-duration: 0.5s;
+    /* animation-fill-mode: both; */
 }
 
 .close-icon {
@@ -37,4 +40,18 @@
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
+}
+
+@keyframes blowup {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.blowup {
+    animation-name: blowup;
 }

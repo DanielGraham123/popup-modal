@@ -583,8 +583,9 @@ try {
 var _ie11 = require("react-app-polyfill/ie11");
 var _react = require("react");
 var _reactDom = require("react-dom");
-var _ = require("../dist/");
-var _indexCss = require("./index.css");
+// import { PopupModal } from '../dist/';
+// import './index.css';
+var _popup = require("./popup");
 const App = ()=>{
     const [showModal, setShowModal] = _react.useState(false);
     const closeModal = ()=>{
@@ -594,7 +595,7 @@ const App = ()=>{
     return /*#__PURE__*/ _react.createElement("div", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 5
         },
         __self: undefined
@@ -602,36 +603,36 @@ const App = ()=>{
         onClick: ()=>setShowModal(true),
         __source: {
             fileName: "index.tsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 7
         },
         __self: undefined
-    }, "Show Modal"), showModal && /*#__PURE__*/ _react.createElement((0, _.PopupModal), {
+    }, "Show Modal"), showModal && /*#__PURE__*/ _react.createElement((0, _popup.PopupModal), {
         handleClose: closeModal,
         __source: {
             fileName: "index.tsx",
-            lineNumber: 19,
+            lineNumber: 20,
             columnNumber: 9
         },
         __self: undefined
     }, /*#__PURE__*/ _react.createElement("h2", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 11
         },
         __self: undefined
     }, "Modal"), /*#__PURE__*/ _react.createElement("div", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 11
         },
         __self: undefined
     }, /*#__PURE__*/ _react.createElement("p", {
         __source: {
             fileName: "index.tsx",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 13
         },
         __self: undefined
@@ -640,7 +641,7 @@ const App = ()=>{
 _reactDom.render(/*#__PURE__*/ _react.createElement(App, {
     __source: {
         fileName: "index.tsx",
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 17
     },
     __self: undefined
@@ -651,7 +652,7 @@ _reactDom.render(/*#__PURE__*/ _react.createElement(App, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react-app-polyfill/ie11":"1ALbI","react":"6biBR","react-dom":"cTtv7","../dist/":"bmkYC","./index.css":"giGSC","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ALbI":[function(require,module,exports) {
+},{"react-app-polyfill/ie11":"1ALbI","react":"6biBR","react-dom":"cTtv7","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./popup":"6TgHr"}],"1ALbI":[function(require,module,exports) {
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -28140,60 +28141,7 @@ module.exports = require("d27b452701bc9786");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"bmkYC":[function(require,module,exports) {
-"use strict";
-module.exports = require("be9db348446be9d3");
-
-},{"be9db348446be9d3":"6UZtp"}],"6UZtp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$765b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$765b.prelude(module);
-
-try {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var React = require("e3d43649a5d9f6fd");
-function styleInject(css, ref) {
-    if (ref === void 0) ref = {};
-    var insertAt = ref.insertAt;
-    if (!css || typeof document === "undefined") return;
-    var head = document.head || document.getElementsByTagName("head")[0];
-    var style = document.createElement("style");
-    style.type = "text/css";
-    if (insertAt === "top") {
-        if (head.firstChild) head.insertBefore(style, head.firstChild);
-        else head.appendChild(style);
-    } else head.appendChild(style);
-    if (style.styleSheet) style.styleSheet.cssText = css;
-    else style.appendChild(document.createTextNode(css));
-}
-var css_248z = "/* Popup style */\n.popup-box {\n    position: fixed;\n    background: #00000050;\n    width: 100%;\n    height: 100vh;\n    top: 0;\n    left: 0;\n}\n\n.box {\n    position: relative;\n    width: 70%;\n    margin: 0 auto;\n    height: auto;\n    max-height: 70vh;\n    margin-top: calc(100vh - 85vh - 20px);\n    background: #fff;\n    border-radius: 4px;\n    padding: 20px;\n    border: 1px solid #999;\n    overflow: auto;\n}\n\n.close-icon {\n    content: '\\2715';\n    cursor: pointer;\n    position: fixed;\n    right: calc(15% - 30px);\n    top: calc(100vh - 85vh - 33px);\n    background: #ededed;\n    width: 25px;\n    height: 25px;\n    border-radius: 50%;\n    line-height: 20px;\n    text-align: center;\n    border: 1px solid #999;\n    font-size: 20px;\n}";
-styleInject(css_248z);
-var PopupModal = function PopupModal(_ref) {
-    var children = _ref.children, handleClose = _ref.handleClose;
-    return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: "popup-box"
-    }, React.createElement("div", {
-        className: "box"
-    }, React.createElement("span", {
-        className: "close-icon",
-        onClick: handleClose
-    }, "x"), children)));
-};
-_c = PopupModal;
-exports.PopupModal = PopupModal;
-var _c;
-$RefreshReg$(_c, "PopupModal");
-
-  $parcel$ReactRefreshHelpers$765b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"e3d43649a5d9f6fd":"6biBR","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
+},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -28795,6 +28743,52 @@ module.exports = require("96622d495519d4e");
     exports.setSignature = setSignature;
 })();
 
-},{}],"giGSC":[function() {},{}]},["3fE3b","kjLP2"], "kjLP2", "parcelRequired98c")
+},{}],"6TgHr":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f285 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f285.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PopupModal", ()=>PopupModal);
+var _react = require("react");
+var _popupCss = require("./popup.css");
+const PopupModal = ({ children, handleClose })=>{
+    return /*#__PURE__*/ _react.createElement(_react.Fragment, null, /*#__PURE__*/ _react.createElement("div", {
+        className: "popup-box ",
+        __source: {
+            fileName: "popup.tsx",
+            lineNumber: 12,
+            columnNumber: 7
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _react.createElement("div", {
+        className: "box blowup",
+        __source: {
+            fileName: "popup.tsx",
+            lineNumber: 13,
+            columnNumber: 9
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _react.createElement("span", {
+        className: "close-icon blowup",
+        onClick: handleClose,
+        __source: {
+            fileName: "popup.tsx",
+            lineNumber: 14,
+            columnNumber: 11
+        },
+        __self: undefined
+    }, "x"), children)));
+};
+
+  $parcel$ReactRefreshHelpers$f285.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"6biBR","./popup.css":"52gIv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"52gIv":[function() {},{}]},["3fE3b","kjLP2"], "kjLP2", "parcelRequired98c")
 
 //# sourceMappingURL=index.6fa4ea68.js.map
